@@ -6,11 +6,11 @@ if [ -e /etc/redhat-release ] ; then
 fi
 
 TERRAFORM_VERSION="0.11.1"
-PACKER_VERSION="0.10.2"
+PACKER_VERSION="1.3.2"
 #
-NOMAD_VERSION="0.7.1"
-CONSUL_VERSION="1.0.6"
-VAULT_VERSION="0.9.6"
+NOMAD_VERSION="0.8.6"
+CONSUL_VERSION="1.2.3"
+VAULT_VERSION="0.11.5"
 # create new ssh key
 [[ ! -f /home/ubuntu/.ssh/mykey ]] \
 && mkdir -p /home/ubuntu/.ssh \
