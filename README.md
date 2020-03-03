@@ -11,3 +11,5 @@ forked from wardviaene/devops-box
 * Vault
 * Consul
 * ChefDK
+* yq
+* xq

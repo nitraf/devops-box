@@ -35,8 +35,7 @@ if [[ $? == 127 ]]; then
     python3 get-pip.py
 fi
 # install awscli and ebcli
-pip install -U awscli
-pip install -U awsebcli
+pip install -U awscli awsebcli yq xq
 
 #terraform
 T_VERSION=$(/usr/local/bin/terraform -v | head -1 | cut -d ' ' -f 2 | tail -c +2)
