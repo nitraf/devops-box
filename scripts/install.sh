@@ -5,12 +5,12 @@ if [ -e /etc/redhat-release ] ; then
   REDHAT_BASED=true
 fi
 
-TERRAFORM_VERSION="0.11.1"
-PACKER_VERSION="1.3.2"
+TERRAFORM_VERSION="0.12.21"
+PACKER_VERSION="1.5.4"
 #
-NOMAD_VERSION="0.8.6"
-CONSUL_VERSION="1.2.3"
-VAULT_VERSION="0.11.5"
+NOMAD_VERSION="0.10.4"
+CONSUL_VERSION="1.7.1"
+VAULT_VERSION="1.2.0"
 # create new ssh key
 [[ ! -f /home/ubuntu/.ssh/mykey ]] \
 && mkdir -p /home/ubuntu/.ssh \
@@ -83,9 +83,10 @@ V_RETVAL=$?
 && unzip -o vault_${VAULT_VERSION}_linux_amd64.zip -d /usr/local/bin \
 && rm vault_${VAULT_VERSION}_linux_amd64.zip
 
+# ChefDK
+ curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk -c stable -v 0.18.30
 
 # clean up
 if [ ! ${REDHAT_BASED} ] ; then
   apt-get clean
 fi
-

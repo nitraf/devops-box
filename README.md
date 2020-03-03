@@ -10,4 +10,4 @@ forked from wardviaene/devops-box
 * Nomad
 * Vault
 * Consul
-
+* ChefDK
